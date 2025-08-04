@@ -38,4 +38,11 @@ x.then(
 -   Similarly, you can assign any function to be executed when the
     promise is **rejected**.
 
+### Key Points
 
+-   A *placeholder* reserves a space in memory.\
+-   When the promise is done (via resolve or reject), the function
+    you assigned will move to the *microtask queue*.\
+-   If the promise is *rejected*, the rejection handler function will
+    be moved to the *microtask queue*.\
+-   The .then() function *returns a new promise* in itself.
